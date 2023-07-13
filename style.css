@@ -1,0 +1,29 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+    width: 95vw;
+    margin: auto;
+}
+
+img {
+    width: 20%;
+    height: 20%;
+    margin: 10px;
+}
+
+form {
+    width: 80vw;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+}
