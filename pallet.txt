@@ -1,0 +1,19 @@
+Font families
+
+font-family: 'Lato', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Source Code Pro', monospace;
+
+
+Color Pallete
+
+Ivory       #FFFFF3  (main)
+Turquoise   #00D9C0  (elements)
+Soft-blue   #50BFF7  (elements)
+Folly       #FF4365  (call to action)
+Navy        #03045E  (call to action)
+Black       #030301  (texts)
+Medium-Gray #4C4C4C  (texts)
+Alabaster   #FAFAFA  (texts)
