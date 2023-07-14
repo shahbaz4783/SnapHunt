@@ -1,0 +1,21 @@
+header{
+    height: 9vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+header a {
+    text-decoration: none;
+    margin: 10px;
+    color: black;
+}
+
+#logo  {
+    display: flex;
+    align-items: center;
+}
+
+nav  {
+    display: flex;
+    align-items: center;
+}

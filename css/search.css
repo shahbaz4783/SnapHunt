@@ -1,0 +1,39 @@
+#search-bar{
+    background-color: aqua;
+}
+
+/* Section */
+#search-term{
+    padding: 20px;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+/* 
+#gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    width: 90vw;
+    margin: auto;
+} */
+
+#gallery {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: auto;
+    width: 90vw;
+}
+
+.list{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+  
+  #gallery img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }

@@ -7,31 +7,6 @@
     font-family: 'Open Sans', sans-serif;
 }
 
-/* Header */
-
-header{
-    height: 5vh;
-    display: flex;
-    justify-content: space-between;
-}
-
-header a {
-    text-decoration: none;
-    margin: 10px;
-    color: black;
-}
-
-#logo  {
-    display: flex;
-    align-items: center;
-}
-
-nav  {
-    display: flex;
-    align-items: center;
-}
-
-/* Search */
 
 .search-section{
     height: 50vh;
@@ -58,23 +33,3 @@ form {
     margin: auto;
     padding: 10px;
 }
-
-
-/* Section */
-#gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1rem;
-
-}
-  
-  #gallery img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-
-
-
-
-
