@@ -1,6 +1,7 @@
+const gallery = document.getElementById('gallery');
+const searchTermDisplay = document.getElementById('search-term');
 const formBox = document.querySelector('form');
 const searchBar = document.getElementById('search-bar');
-const gallery = document.getElementById('gallery');
 
 const fetchAPIdata = async (endpoint) => {
 	const API_KEY = '0qSeS2pfsVNs19YwhdV6ari9sbGwCfbtP-Y0gYhJnS8';
@@ -11,17 +12,27 @@ const fetchAPIdata = async (endpoint) => {
 	return data;
 };
 
-formBox.addEventListener('submit', async (e) => {
+
+formBox.addEventListener('submit', (e) => {
 	e.preventDefault();
 	const searchTerm = searchBar.value;
-	const searchData = await fetchAPIdata(searchTerm);
-
-	gallery.innerHTML = '';
-
-	searchData.results.forEach((photo) => {
-		const img = document.createElement('img');
-		img.src = photo.urls.regular;
-		img.alt = photo.alt_description;
-		gallery.appendChild(img);
-	});
+	const url = `search.html?query=${encodeURIComponent(searchTerm)}`;
+	window.location.href = url;
 });
+
+const urlParams = new URLSearchParams(window.location.search);
+const searchTerm = urlParams.get('query');
+
+
+fetchAPIdata(searchTerm)
+	.then((searchData) => {
+		searchData.results.forEach((photo) => {
+			const img = document.createElement('img');
+			img.src = photo.urls.regular;
+			img.alt = photo.alt_description;
+			gallery.appendChild(img);
+		});
+	})
+	.catch((error) => {
+		console.log(error);
+	});
