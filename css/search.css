@@ -43,3 +43,12 @@
         margin: 7rem auto 0 auto;
     }
   }
+
+  
+
+  @media screen and (max-width: 576px) {
+    #gallery{
+        flex-direction: column;
+    }
+  }
+
