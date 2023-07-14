@@ -2,20 +2,50 @@ header{
     height: 9vh;
     display: flex;
     justify-content: space-between;
+    /* background-color: #8ECAE6; */
+    position: fixed;
+    width: 100vw;
+    top: 0;
 }
 
 header a {
     text-decoration: none;
     margin: 10px;
-    color: black;
+    color: #023047;
+    font-size: 1.4rem;
 }
 
 #logo  {
     display: flex;
     align-items: center;
+    font-size: 1.6rem;
+}
+
+#logo a{
+    font-size: 1.6rem;
 }
 
 nav  {
     display: flex;
     align-items: center;
 }
+
+.background {
+    background-color: #4cc9f0;
+    transition: 0.5s all ease-in;
+  }
+
+
+  @media screen and (max-width: 768px) {
+    nav {
+        display: none;
+    }
+    header{
+        flex-direction: column;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        padding-top: 0;
+    }
+  }

@@ -3,6 +3,7 @@ const listDivs = document.querySelectorAll('.list');
 const formBox = document.querySelector('form');
 const searchTermDisplay = document.getElementById('search-term');
 const searchBar = document.getElementById('search-bar');
+const randomImg = document.getElementById('ranImg');
 
 const fetchAPIdata = async (endpoint) => {
     const API_KEY = '0qSeS2pfsVNs19YwhdV6ari9sbGwCfbtP-Y0gYhJnS8';
@@ -30,7 +31,7 @@ const searchTermCap = searchTerm.charAt(0).toUpperCase() + searchTerm.slice(1);
 fetchAPIdata(searchTerm)
 	.then((searchData) => {
         if (searchData.results.length === 0) {
-            searchTermDisplay.innerHTML = `No Results Found for ${searchTermCap}`;
+            searchTermDisplay.innerHTML = `No Result found for ${searchTermCap}`;
         } else {
             searchTermDisplay.innerHTML = `Showing Results for ${searchTermCap}`;
         }
@@ -44,10 +45,23 @@ fetchAPIdata(searchTerm)
 
 		let listIndex = 0;
 		images.forEach((img) => {
-			listDivs[listIndex].appendChild(img);
+			listDivs[listIndex].append(img);
 			listIndex = (listIndex + 1) % listDivs.length;
 		});
 	})
 	.catch((error) => {
 		console.log(error);
 	});
+
+
+    const header = document.querySelector('header');
+const swipeThreshold = window.innerHeight * 0.15;
+
+const changeBg = () => {
+	if (window.scrollY > swipeThreshold) {
+		header.classList.add('background');
+	} else {
+		header.classList.remove('background');
+	}
+};
+window.addEventListener('scroll', changeBg);

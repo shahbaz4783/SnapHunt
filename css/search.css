@@ -1,21 +1,12 @@
-#search-bar{
-    background-color: aqua;
-}
-
 /* Section */
 #search-term{
+    /* margin-top: 4rem; */
     padding: 20px;
     font-size: 2rem;
     font-weight: bolder;
-}
-/* 
-#gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
     width: 90vw;
-    margin: auto;
-} */
+    margin: 4rem auto 0 auto;
+}
 
 #gallery {
     display: flex;
@@ -36,4 +27,19 @@
     width: 100%;
     height: auto;
     object-fit: cover;
+  }
+
+  header {
+    background-color: #4cc9f0;
+  }
+
+  @media screen and (max-width: 768px) {
+    #search-term{
+
+        padding: 20px;
+        font-size: 1.1rem;
+        font-weight: bolder;
+        width: 90vw;
+        margin: 7rem auto 0 auto;
+    }
   }
