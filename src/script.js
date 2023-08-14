@@ -13,7 +13,6 @@ const fetchAPIdata = async (endpoint) => {
     const data = await response.json();
     return data;
   };
-  
 
 
 formBox.addEventListener('submit', (e) => {
