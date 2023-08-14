@@ -5,12 +5,32 @@ const searchTermDisplay = document.getElementById('search-term');
 const searchBar = document.getElementById('search-bar');
 const randomImg = document.getElementById('ranImg');
 
+// Loading
+const showLoader = () => {
+	document.querySelector('.loading-section').style.display = 'flex';
+};
+const hideLoader = () => {
+	document.querySelector('.loading-section').style.display = 'none';
+};
+const showContent = () => {
+	document.querySelector('#gallery').style.display = 'flex';
+};
+const hideContent = () => {
+	document.querySelector('#gallery').style.display = 'none';
+};
+
+// Fetching Data
 const fetchAPIdata = async (endpoint) => {
+	showLoader();
+	hideContent();
     const API_KEY = '0qSeS2pfsVNs19YwhdV6ari9sbGwCfbtP-Y0gYhJnS8';
     const API_URL = 'https://api.unsplash.com/search/photos?page=1&per_page=30';
   
     const response = await fetch(`${API_URL}&query=${endpoint}&client_id=${API_KEY}`);
     const data = await response.json();
+
+	hideLoader();
+	showContent();
     return data;
   };
 
@@ -64,3 +84,5 @@ const changeBg = () => {
 	}
 };
 window.addEventListener('scroll', changeBg);
+
+
